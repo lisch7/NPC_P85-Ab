@@ -38,12 +38,10 @@ ensure_dir(table.path)
 
 load("./my_color.rdata")
 
-data <- readxl::read_xlsx("./data/原始数据整理/前瞻性数据汇总/combined_data.xlsx") %>%
-  dplyr::filter(enroll==1) %>% 
-  dplyr::filter(time=="pre-treatment")
+data <- readxl::read_xlsx("./combined_data.xlsx")
 
 data$age <- as.numeric(data$age)
-data$gender <- factor(ifelse(data$gender=="男","Male","Female"),levels = c("Male","Female"))
+data$gender <- factor(data$gender,levels = c("Male","Female"))
 data$NPC_stage <- factor(data$NPC_stage,levels=c("I","II","III","IVA","IVB","Unknown","/"))
 data$group_ref <- factor(data$group,levels = c("NPC","nonNPC"),labels = c("1","0"))
 data$group <- factor(data$group,levels = c("NPC","nonNPC"),labels = c("NPC","nonNPC"))
@@ -56,8 +54,6 @@ data$EBV_DNA_absolute <- as.numeric(data$EBV_DNA_absolute)
 data$EBV_DNA0 <- ifelse(data$EBV_DNA0=="NA",NA,data$EBV_DNA0)
 data$EBV_DNA0 <- factor(data$EBV_DNA0,levels = c("(+)","(-)"),labels = c("1","0"))
 data$center <- factor(data$center,levels = c("SYSUCC","ZSCPH","TJH-HUST","WZRCH","FJCH")) 
-writexl::write_xlsx(data,sprintf("%s/combined_data.xlsx",save.path))
-
 
 ##### Figure2 ##################################################################
 
