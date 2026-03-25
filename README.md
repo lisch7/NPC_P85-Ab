@@ -68,9 +68,8 @@ print(group_infer)
 # Citation
 If you find our research helpful, please cite our [paper](https://jamanetwork.com/journals/jamaoncology/article-abstract/2846700)
 
-```
-Li SC, Li FG, Wu SJ, et al. Diagnostic Performance of Anti-Epstein-Barr Virus BNLF2b in Suspected Nasopharyngeal Carcinoma. JAMA Oncol. Published online March 19, 2026. doi:10.1001/jamaoncol.2026.0251
-```
+> Li SC, Li FG, Wu SJ, et al. Diagnostic Performance of Anti-Epstein-Barr Virus BNLF2b in Suspected Nasopharyngeal Carcinoma. JAMA Oncol. Published online March 19, 2026. doi:10.1001/jamaoncol.2026.0251
+
 
 # Contact us
 - Su-Chen Li, lisc@sysucc.org.cn
